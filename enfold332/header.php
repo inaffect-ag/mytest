@@ -48,6 +48,9 @@ if( strpos($responsive, 'responsive') !== false ) echo '<meta name="viewport" co
 
 wp_head();
 
+echo '<script src="'.get_template_directory_uri().'/includes/swal/dist/sweetalert2.min.js"></script>';
+echo '<link rel="stylesheet" type="text/css" href="'.get_template_directory_uri().'/includes/swal/dist/sweetalert2.css">';
+
 ?>
 
 </head>

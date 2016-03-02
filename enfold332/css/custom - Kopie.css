@@ -6,8 +6,7 @@ h1.av-special-heading-tag, .main_color h1 {
 	background:#da0812;
 	color:white;
 	padding:2px 10px 2px 10px !important;
-	display: inline-block;
-	margin:0px 0px 15px 0px !important;
+	display:inline;
 }
 
 #header_meta {
@@ -64,7 +63,7 @@ div .logo {
 	padding:10px;
 }
 .slide-entry-anriss-text {
-    height: 95px;
+    height: 84px;
     overflow: hidden;
 	color:black;
 }
@@ -72,8 +71,8 @@ div .logo {
 
 
 .slide-entry-wrap .slide-entry {
-	/*width:100%;
-	max-width:248px;*/
+	width:100%;
+	max-width:248px;
 	margin: 0 5% 15px 0;
 	float:left;
 }
@@ -108,83 +107,12 @@ div .logo {
 .socials img {
 	width:37px;
 	float:left;
-	margin:15px 15px 0px 0px;
+	margin:15px 0px 0px 15px;
 }
 .socials a img {
 	border:none;
 }
 
-.single.single-product aside.sidebar.sidebar_sidebar_right.alpha.units {
-	display:none !important;	
-}
-
-.infobox {
-	margin-top:50px;	
-}
-
-.infobox:hover {
-	text-decoration:none;	
-}
-
-.infobox_picture {
-    width: 140px;
-    height: 140px;
-    position: absolute;
-    top: -100px;
-    left: 50%;
-    margin:  0 0 0 -70px;
-}
-
-.infobox_picture.box1 {
-	background-image: url(/wp-content/uploads/2015/12/infobox_experten2.png);
-}
-
-.infobox_picture.box2 {
-	background-image: url(/wp-content/uploads/2015/12/infobox_gutscheine2.png);
-}
-
-.infobox_picture.box3 {
-	background-image: url(/wp-content/uploads/2015/12/infobox_standorte2.png);
-}
-
-.post-info {
-	background:#da0812;
-	color:white;
-	padding:2px 10px 2px 10px !important;
-	display:inline;	
-}
-
-.author_container {
-	width:100%;
-	margin:8px 0px 0px 0px;
-}
-
-.author_ava {
-	width: 45px;
-	float: left;
-}
-
-.author_nick {
-	float: left;
-	padding:10px 0px 11px 10px;
-}
-
-/*Footer*/
-
-#nav_menu-2, #nav_menu-3, #text-3 {
-	margin-top:0px !important;
-}
-#text_icl-4, #text_icl-5 {
-	margin-bottom:0px !important;
-	margin-top:0px !important;
-}
-#text_icl-2, #text_icl-6 {
-	margin-bottom:0px !important;
-	margin-top:0px !important;
-}
-.widgettitle {
-	text-decoration: underline;
-}
 
 /*
 Desktop Styles
@@ -212,28 +140,6 @@ Desktop Styles
 	#top #header_main > .container .main_menu ul:first-child > li > a {
 		line-height:30px !important;
 		height:30px !important;
-	}
-	.avia-content-slider .slide-entry-wrap .slide-entry {
-    	max-width: 46%;
-		margin: 0 5% 15px 0;
-	}
-	.avia-content-slider .slide-entry-wrap .slide-entry .slide-entry-title {
-		height:46px;
-		overflow:hidden;
-	}
-	.avia-content-slider .slide-entry-wrap .slide-entry.post-entry-last {
-		margin: 0 0 15px 0;
-	}
-	.avia-content-slider .slide-image img {
-		width:100%;
-	}
-	
-	.page-id-799 .slide-loop-4 {
-		margin: 0 0 15px 0;
-	}
-	
-	.page-id-1066 .slide-loop-3 {
-		margin: 0 0 15px 0;
 	}
 }
 

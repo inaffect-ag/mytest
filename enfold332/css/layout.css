@@ -3536,7 +3536,7 @@ visibility: visible;
 .responsive.html_mobile_menu_tablet.html_logo_right #advanced_menu_toggle{left:50px;}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
 .main_menu .avia-menu, #header_main_alternate, .fallback_menu{display:none;}
 .container #advanced_menu_toggle, #advanced_menu_hide{display:block;}
 .responsive.html_mobile_menu_tablet.html_logo_right #advanced_menu_toggle{left:auto;}

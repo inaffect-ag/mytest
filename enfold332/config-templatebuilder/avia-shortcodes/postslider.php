@@ -286,6 +286,13 @@ if ( !class_exists( 'avia_post_slider' ) )
 					$the_id 	= $entry->ID;
 					$parity		= $loop_counter % 2 ? 'odd' : 'even';
 					$last       = $this->entries->post_count == $post_loop_count ? " post-entry-last " : "";
+					/*EDITED*/
+					if($columns == '4') {
+						if($post_loop_count % 4 == 0) {
+							$last = "post-entry-last ";
+						}
+					}
+					/*EDITED END*/
 					$post_class = "post-entry post-entry-{$the_id} slide-entry-overview slide-loop-{$post_loop_count} slide-parity-{$parity} {$last}";
 					$link 		= get_permalink($the_id);
 					$excerpt	= "";
@@ -309,7 +316,30 @@ if ( !class_exists( 'avia_post_slider' ) )
 
 
 					$permalink = '<div class="read-more-link"><a href="'.get_permalink($the_id).'" class="more-link">'.__('Read more','avia_framework').'<span class="more-link-arrow">  &rarr;</span></a></div>';
-					$prepare_excerpt = !empty($entry->post_excerpt) ? $entry->post_excerpt : avia_backend_truncate($entry->post_content, apply_filters( 'avf_postgrid_excerpt_length' , 60) , apply_filters( 'avf_postgrid_excerpt_delimiter' , " "), "…", true, '');
+					//$prepare_excerpt = !empty($entry->post_excerpt) ? $entry->post_excerpt : avia_backend_truncate($entry->post_content, apply_filters( 'avf_postgrid_excerpt_length' , 60) , apply_filters( 'avf_postgrid_excerpt_delimiter' , " "), "…", true, '');
+					$prepare_excerpt = "<div class='slide-entry-anriss-text'>".get_post_meta( $the_id, 'anriss_text', true )."</div>";
+					
+					/*EDITED*/
+						
+					/*$postdata = get_post($the_id, ARRAY_A);
+					$authorID = $postdata['post_author'];
+					$authorname = get_author_name( $authorID );
+					//$email = the_author_meta( 'user_email', $authorID );
+										
+					if($authorname == "Nicole Simmen" || $authorname == "Stefan Milius" || $authorname == "Nadia Meier" ) {
+						$prepare_excerpt .= '<div class="author_container"><div class="author_ava">' . get_avatar( $authorID, 45 ) . '</div>';
+						$prepare_excerpt .= '<div class="author_nick">' . get_author_name( $authorID ) . '</div><div style="clear:both;"></div></div>';
+					}
+					else {
+						$prepare_excerpt .= '<div class="author_container"><div class="author_ava"><img src="http://ver2.fcw.ch/wp-content/uploads/2015/11/fcw_logo_small.png" width="45" /></div>';
+						$prepare_excerpt .= '<div class="author_nick"></div><div style="clear:both;"></div></div>';
+					}*/
+					
+					/*if(get_author_name( $authorID ) == 'inaffect') {
+						//$email = the_author_meta( 'user_email', $authorID );
+						
+					}*/
+					/*EDITED END*/
 
 		                  	if($format == 'link')
 		                   	{
@@ -389,13 +419,13 @@ if ( !class_exists( 'avia_post_slider' ) )
                     if($show_meta && !empty($excerpt))
 					{
 						$output .= "<div class='slide-meta'>";
-						if ( $commentCount != "0" || comments_open($the_id) && $entry->post_type != 'portfolio')
+						/*if ( $commentCount != "0" || comments_open($the_id) && $entry->post_type != 'portfolio')
 						{
 							$link_add = $commentCount === "0" ? "#respond" : "#comments";
 							$text_add = $commentCount === "1" ? __('Comment', 'avia_framework' ) : __('Comments', 'avia_framework' );
 
 							$output .= "<div class='slide-meta-comments'><a href='{$link}{$link_add}'>{$commentCount} {$text_add}</a></div><div class='slide-meta-del'>/</div>";
-						}
+						}*/
                         $markup = avia_markup_helper(array('context' => 'entry_time','echo'=>false, 'id'=>$the_id, 'custom_markup'=>$custom_markup));
 						$output .= "<time class='slide-meta-time updated' $markup>" .get_the_time(get_option('date_format'), $the_id)."</time>";
 						$output .= "</div>";

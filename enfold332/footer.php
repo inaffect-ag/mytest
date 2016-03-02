@@ -23,8 +23,12 @@
 				//get columns
 				$columns = avia_get_option('footer_columns');
 		?>
+        
+        
+        		<div class="teddyspace"></div>
+                    
 				<div class='container_wrap footer_color' id='footer'>
-
+                
 					<div class='container'>
 
 						<?php
@@ -63,10 +67,12 @@
 
 
 					</div>
-
-
+                    
 				<!-- ####### END FOOTER CONTAINER ####### -->
 				</div>
+                
+                
+                
 
 	<?php   } //endif nofooterwidgets ?>
 

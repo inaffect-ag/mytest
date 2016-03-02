@@ -518,3 +518,9 @@ require_once( 'functions-enfold.php');
  * add option to edit elements via css class
  */
 // add_theme_support('avia_template_builder_custom_css');
+
+
+/*
+ *  register custom functions that are not related to the framework nor theme
+ */
+require_once( 'functions-custom.php');
